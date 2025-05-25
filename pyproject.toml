@@ -1,0 +1,20 @@
+[project]
+name = "finalproject"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "grad-cam>=1.5.5",
+    "ipykernel>=6.29.5",
+    "ipython>=9.2.0",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.4",
+    "optuna>=4.2.1",
+    "optuna-dashboard>=0.18.0",
+    "scikit-learn>=1.6.1",
+    "standard-imghdr>=3.13.0",
+    "tensorboard>=2.19.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+]
