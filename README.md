@@ -23,7 +23,7 @@ Train a student model through **knowledge distillation from two heterogeneous te
 - **Curriculum-Based Switching**: The student alternates between teachers every 4 epochs.
 - **Joint Optimization**: The student learns from both teachers simultaneously using averaged soft losses.
 
-### ⚔️ Adversarial Attacks
+### Adversarial Attacks
 
 Implemented attacks:
 - **FG** – Fast Gradient (L2)
@@ -34,9 +34,7 @@ These are applied to the student, and tested on a black-box target: **GoogLeNet*
 
 ---
 
----
-
-## 📊 Key Results (CIFAR-10)
+## Key Results (CIFAR-10)
 
 | Model          | FG     | FGS    | PGD    | PGD Time |
 |----------------|--------|--------|--------|-----------|
