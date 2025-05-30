@@ -35,18 +35,17 @@ These are applied to the student, and tested on a black-box target: **GoogLeNet*
 ---
 
 ## Key Results (CIFAR-10)
+We chose the hyperparameters of the attack methods to maintain an RMSD of **25 ±1**. The attacks were generated on the **test images (N = 10,000)** across all 10 classes and subsequently used to attack the **black-box GoogLeNet model**. Additionally, we limit thenumber of iterations to generate PGD attacks to 10 with a **batch size of 150** and recorded the total time taken for the entire test set. 
+| Type        | Attacker Model                          | RMSD  | FG   | FGS  | PGD  | PGD Time (s) |
+|-------------|------------------------------------------|-------|------|------|------|--------------|
+| Self-Attack | GoogLeNet (Blackbox)                     | 24.48 | 0.80 | 0.88 | 1.00 | 176.47       |
+| Baselines   | ResNet-50 (Teacher 1)                    | 24.49 | 0.69 | 0.78 | 0.93 | 69.60        |
+|             | DenseNet-151 (Teacher 2)                 | 24.48 | 0.67 | 0.76 | 0.91 | 139.58       |
+|             | **Ensemble (ResNet-50 & DenseNet-151)** | 24.48 | 0.69 | 0.77 | **0.96** | 201.21  |
+| Students    | **Curriculum Trained (Type 1)**          | 24.56 | **0.78** | **0.86** | **0.95** | **33.01** |
+|             | Jointly Trained (Type 2)                 | 24.55 | 0.73 | 0.83 | 0.93 | 32.03        |
 
-| Model          | FG     | FGS    | PGD    | PGD Time |
-|----------------|--------|--------|--------|-----------|
-| ResNet-50      | 0.69   | 0.78   | 0.93   | 69.6 s    |
-| DenseNet-161   | 0.67   | 0.76   | 0.91   | 139.6 s   |
-| Ensemble       | 0.69   | 0.77   | **0.96** | 201.2 s   |
-| Curriculum KD  | **0.78** | **0.86** | **0.95** | **33.0 s** |
-| Joint KD       | 0.73   | 0.83   | 0.93   | 32.0 s    |
-
-- Attack Success Rate (ASR) ↑
-- PGD Time ↓ 6× faster than ensemble
-- Lower RMSD (≈25) ensures imperceptibility
+Our proposed student model with **curriculum training** performs comparably to the Ensemble baseline (95% for PGD). Most notably, the time taken to generate 10,000 PGD attacks for our method took only 33 seconds.
 
 ---
 
