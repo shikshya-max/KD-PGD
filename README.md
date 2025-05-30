@@ -77,7 +77,6 @@ Checkpoints are saved as 'stu_resnet18\_{'type'}\_a{'alpha'}\_t\_{'tau'}.cpt'. T
 -   DenseNet161 (Teacher 2): Test=92.21%
 -   GoogLeNet (BlackBox Model): Test=91.26%
 -   ResNet18 (Pretrained): Test=90.1%
--   ResNet18 (Sid Trained): Test=87.27%
 
 
 
