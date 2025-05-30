@@ -40,10 +40,10 @@ We chose the hyperparameters of the attack methods to maintain an RMSD of **25 Â
 |-------------|------------------------------------------|-------|------|------|------|--------------|
 | Self-Attack | GoogLeNet (Blackbox)                     | 24.48 | 0.80 | 0.88 | 1.00 | 176.47       |
 | Baselines   | ResNet-50 (Teacher 1)                    | 24.49 | 0.69 | 0.78 | 0.93 | 69.60        |
-|             | DenseNet-151 (Teacher 2)                 | 24.48 | 0.67 | 0.76 | 0.91 | 139.58       |
-|             | **Ensemble (ResNet-50 & DenseNet-151)** | 24.48 | 0.69 | 0.77 | **0.96** | 201.21  |
+| Baselines   | DenseNet-151 (Teacher 2)                 | 24.48 | 0.67 | 0.76 | 0.91 | 139.58       |
+| Baselines   | **Ensemble (ResNet-50 & DenseNet-151)** | 24.48 | 0.69 | 0.77 | **0.96** | 201.21  |
 | Students    | **Curriculum Trained (Type 1)**          | 24.56 | **0.78** | **0.86** | **0.95** | **33.01** |
-|             | Jointly Trained (Type 2)                 | 24.55 | 0.73 | 0.83 | 0.93 | 32.03        |
+| Students    | Jointly Trained (Type 2)                 | 24.55 | 0.73 | 0.83 | 0.93 | 32.03        |
 
 Our proposed student model with **curriculum training** performs comparably to the Ensemble baseline (95% for PGD). Most notably, the time taken to generate 10,000 PGD attacks for our method took only 33 seconds.
 
